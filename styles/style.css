@@ -76,4 +76,40 @@ div#unwraped-logoNavegacao {
 nav {
     height: 80px;
     max-width: 100%;
+
+    position: sticky;
+    z-index: 2;
+}
+
+div#background1 {
+    background-image: url('../imagens/BackgroundMonsterEncourtado.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+
+
+    z-index: 1;
+
+    display: block;
+
+    margin-top: -15px;
+    height: 375px;
+    width: 120%;
+}
+
+#fundoLataMonster {
+    height: 70vw;
+    width: 70vw;
+
+    transform: rotate(54deg);
+    display: flex;
+    
+
+    z-index: 2;
+    border-radius: 15px;
+    background-color: #1C2D34;
+    box-shadow: 4px 4px 5px 2px #4A727E;
+}
+
+#fundoLataMonster > img{
+    transform: rotate(299deg);
 }
