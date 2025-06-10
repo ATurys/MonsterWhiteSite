@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    //Ajuste da Fonte do texto informativo
     const mediaQueryMobile = window.matchMedia("(min-width:767px)");
     const divTextoInformativo = document.getElementById("textoIntordutorio");
     const paragrafoTextoInformativo = divTextoInformativo.querySelector("p");
 
-    function ajustarFonte() {
+    function ajustarFonteTextoInformativo() {
         const alturaMaxima = 140;
         let tamanhoFonte = 25;
         /*line-height * font-size == tamanho por linha
@@ -21,9 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    ajustarFonte();
+    ajustarFonteTextoInformativo();
 
-    window.addEventListener("resize", ajustarFonte) //Ajusta a fonte toda vez que a tela for redimensionada
-    
-    mediaQueryMobile.addEventListener("change", ajustarFonte);
+    window.addEventListener("resize", ajustarFonteTextoInformativo) //Ajusta a fonte toda vez que a tela for redimensionada
+    mediaQueryMobile.addEventListener("change", ajustarFonteTextoInformativo);
+
+    var fundoImg = document.getElementById("fundoLataMonster"); 
+        function movimentoMouseFundoIMG(e){
+            let mouse = e.clientX
+            let mouseY = e.clientY
+
+            let posicaoNovaX = 
+            let posicaoNovaY
+        }
+    document.addEventListener("mousemove", movimentoMouseFundoIMG);
 });
