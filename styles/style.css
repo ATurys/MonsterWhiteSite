@@ -1,13 +1,25 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/*
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
 
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body, html {
     height: 98vh;
-    width: 100vw;
+    width: 100%;
+    font-family: "Bebas Neue", sans-serif;
+    overflow-x: hidden;
 }
 
 div#barraPrincipalNavegacao {
@@ -38,7 +50,6 @@ div#barraDecorativalNavegacao {
     margin-right: 102px;
 
     background-color: #4792A9;
-    display: inline;
 }
 
 div#logoNavegacao {
@@ -81,19 +92,27 @@ nav {
     z-index: 5;
 }
 
+div#blocoFlex01 {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    width: 100%;
+    
+}
+
 div#background1 {
     background-image: url('../imagens/BackgroundMonsterEncourtado.png');
     background-size:cover;
     background-repeat: no-repeat;
 
-
+    position: relative;
     z-index: 1;
 
     display: block;
 
     margin-top: -15px;
     height: 375px;
-    width: 120%;
+    width: 100%;
 }
 
 #fundoLataMonster {
@@ -137,8 +156,15 @@ div#textoIntordutorio{
 
 div#textoIntordutorio > p {
     color: white;
-    -webkit-text-stroke-color: #1C2D34;
-    -webkit-text-stroke-width: 2px ;
+    text-shadow: 0.5px 0.5px black;
+    
+    font-size: 25px;
+
+    transform: skew(-15deg);
+    padding-right: 5px;
+    margin-left: -5px;
+
+    line-height: 1.1;
 }
 
 #transiçãoBackground1{
