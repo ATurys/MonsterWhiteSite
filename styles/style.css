@@ -138,20 +138,25 @@ div#background1 {
 }
 
 div#textoIntordutorio{
-    position: relative;
+    position: absolute;
     border-radius: 5px;
 
-    transform: skew(15deg);
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, 40%) skew(15deg);
     background-color: #4792A9;
 
-    margin: auto;
+    margin: 5px;
     padding: 20px;
 
-    max-width: 360px;
     width: 80%;
+    height: 150px;
 
     text-align: center;
     z-index: 2;
+
+    display: flex;
 }
 
 div#textoIntordutorio > p {
@@ -159,12 +164,9 @@ div#textoIntordutorio > p {
     text-shadow: 0.5px 0.5px black;
     
     font-size: 25px;
-
-    transform: skew(-15deg);
-    padding-right: 5px;
-    margin-left: -5px;
-
     line-height: 1.1;
+
+    transform: translate(0px, -10px) skew(-15deg);
 }
 
 #transiçãoBackground1{
