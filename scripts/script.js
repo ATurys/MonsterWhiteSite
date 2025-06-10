@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ajustarFonte();
 
-    window.addEventListener("resize", ajustarFonte()) //Ajusta a fonte toda vez que a tela for redimensionada
+    window.addEventListener("resize", ajustarFonte) //Ajusta a fonte toda vez que a tela for redimensionada
     
     mediaQueryMobile.addEventListener("change", ajustarFonte);
 });
