@@ -28,13 +28,22 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", ajustarFonteTextoInformativo) //Ajusta a fonte toda vez que a tela for redimensionada
     mediaQueryMobile.addEventListener("change", ajustarFonteTextoInformativo);
 
+    //Fazer o fundo da imagem de landing page responsiva [TODO]
     var fundoImg = document.getElementById("fundoLataMonster"); 
         function movimentoMouseFundoIMG(e){
             let mouse = e.clientX
             let mouseY = e.clientY
 
-            let posicaoNovaX = 
-            let posicaoNovaY
+            let posicaoNovaX; 
+            let posicaoNovaY;
         }
     document.addEventListener("mousemove", movimentoMouseFundoIMG);
+
+    //Ocultar barra lateral de navegação
+    const linkIconeNavegacao = document.getElementById("linkIconeNavegacao")
+    const divNavegacaoLateral = document.getElementById("barraNavegacaoLateral");
+
+    linkIconeNavegacao.addEventListener("click", () => {
+        divNavegacaoLateral.classList.toggle("visible")
+    });
 });
