@@ -259,3 +259,61 @@ div#transiçãoBackground1Wrap {
     height: 100%;
 }
 
+h1 {
+    margin-top: 50px;
+    color: black;
+    position: relative;
+    z-index: 2;
+
+    text-indent: 1em;
+}
+
+div#artigos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    background-color: red;
+
+    position: relative;
+    z-index: 2;
+
+    margin: auto;
+
+    width: 80vw;
+
+}
+
+.artigoTemplate {
+    height: 100%;
+    width: 100%;
+
+    min-width:300px;
+    min-height: 200px;
+
+    max-height: 400px;
+    max-width: 500px;
+
+    background-color: lightblue;
+
+    margin: 1% 0px;
+}
+
+.imagemArtigoTemplate {
+    width: 90%;
+    height: 80%;
+    min-height: 150px;
+    
+    justify-self: center;
+
+    margin: 10px;
+    margin-bottom: 5px;
+
+    background-color: green;
+}
+
+.artigoTemplate > h2 {
+    text-indent: 0.5em;
+    padding: 5px;
+}
+
