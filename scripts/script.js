@@ -90,8 +90,11 @@ document.addEventListener("DOMContentLoaded", () => {
     //Ocultar barra lateral de navegação
     const linkIconeNavegacao = document.getElementById("linkIconeNavegacao")
     const divNavegacaoLateral = document.getElementById("barraNavegacaoLateral");
+    const imgNavegacaoLateral = document.querySelector(".barraLateralAtiva")
 
     linkIconeNavegacao.addEventListener("click", () => {
         divNavegacaoLateral.classList.toggle("visible")
+        imgNavegacaoLateral.classList.toggle("barraLateralAtiva")
+
     });
 });

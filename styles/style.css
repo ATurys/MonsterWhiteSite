@@ -44,6 +44,11 @@ div#barraPrincipalNavegacao  > img{
     height: 45px;
 }
 
+div#unwraped-logoNavegacao > div#logoNavegacao > a > img.barraLateralAtiva { 
+    transform: rotate(3deg);
+    
+}
+
 div#barraDecorativalNavegacao {
     height: 100%;
     width: 20px;
@@ -77,7 +82,8 @@ div#logoNavegacao {
 
 div#unwraped-logoNavegacao > div#logoNavegacao > a > img{
     max-height: 80%;
-
+    transform:  skew(-20deg) rotate(-90deg);
+    transition: transform 0.5s ease-in-out;
     position: fixed;
 }
 
