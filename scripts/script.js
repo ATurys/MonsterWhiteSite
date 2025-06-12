@@ -64,17 +64,17 @@ document.addEventListener("DOMContentLoaded", () => {
             let posicaoSombraNovaY = -deltaY * atenuacao;
             
             //Limita o quanto a box-shadow pode se mover (evita q fique muito para fora)
-            const limite = 50;
+            const limite = 25;
             posicaoSombraNovaX = Math.max(-limite, Math.min(limite, posicaoSombraNovaX));
             posicaoSombraNovaY = Math.max(-limite, Math.min(limite, posicaoSombraNovaY));
 
     
             const blur = 20;
-            const spreadBoxShadow = 10;
+            const spreadBoxShadow = 0;
             const boxShadowCor = "#4A727E"
 
             
-            fundoImg.style.boxShadow = `${posicaoSombraNovaX} ${posicaoSombraNovaY} ${blur} ${spreadBoxShadow} ${boxShadowCor}`
+            fundoImg.style.boxShadow = `${posicaoSombraNovaX}px ${posicaoSombraNovaY}px ${blur}px ${spreadBoxShadow}px ${boxShadowCor}`;
 
             animationFrameId = null;
             
