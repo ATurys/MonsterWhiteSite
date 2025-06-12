@@ -176,6 +176,9 @@ div#background1 {
     transform: rotate(305deg);
     margin: -30% 10% 10% 18%;
     height: 140%;
+
+    position: relative;
+    z-index: 3;
 }
 
 div#textoIntordutorio{
@@ -221,12 +224,12 @@ div#textoIntordutorio > p {
 div#transiçãoBackground1 > div#fundoBranco {
     background-color: white;
     width: 140%;
-    height: 200px;
+    height: 250px;
     transform: translate(-40%, 20%) rotate(10deg);
     position: absolute;
 
-    z-index: 2;
-    margin-top: -20%;
+    z-index: 1;
+    margin-top: -30%;
     margin-left: -10%;
     padding-left:  10%;
     padding-right: 10%;
