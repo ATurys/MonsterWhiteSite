@@ -107,9 +107,8 @@ div#unwraped-logoNavegacao {
 #barraNavegacaoLateral {
     width: 100px;
     background-color: #A5A4A2;
-    display: block;
+    
     height: 100vh;
-
     right: 0px;
     top: 0px;
 
@@ -117,6 +116,21 @@ div#unwraped-logoNavegacao {
     z-index: 1;
 
     transition: right 0.5s ease-out;
+
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    padding: 20px;
+}
+
+#barraNavegacaoLateral > a {
+    margin: 5px;
+}
+
+#barraNavegacaoLateral > a > img {
+    display: block;
+    width: 100%;
+
+    object-fit: cover;
 }
 
 div#barraNavegacaoLateral.visible {
@@ -270,10 +284,8 @@ h1 {
 
 div#artigos {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     justify-content: space-around;
-
-    background-color: red;
 
     position: relative;
     z-index: 2;
@@ -294,7 +306,7 @@ div#artigos {
     max-height: 400px;
     max-width: 400px;
 
-    background-color: lightblue;
+    background-color: #F6F5F1;
 
     margin: 1% 0px;
 }
@@ -313,7 +325,7 @@ div#artigos {
     margin: 10px;
     margin-bottom: 5px;
 
-    background-color: green;
+    background-color: #C9C8C4;
 }
 
 .imagemArtigoTemplate > img {
