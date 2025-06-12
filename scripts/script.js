@@ -29,15 +29,63 @@ document.addEventListener("DOMContentLoaded", () => {
     mediaQueryMobile.addEventListener("change", ajustarFonteTextoInformativo);
 
     //Fazer o fundo da imagem de landing page responsiva [TODO]
-    var fundoImg = document.getElementById("fundoLataMonster"); 
-        function movimentoMouseFundoIMG(e){
-            let mouse = e.clientX
-            let mouseY = e.clientY
 
-            let posicaoNovaX; 
-            let posicaoNovaY;
+    var fundoImg = document.getElementById("fundoLataMonsterInterno");
+    let animationFrameId = null; //Define o frame inicial
+    let mouseX = 0; // Posição inicial do eixo Y do mouse
+    let mouseY = 0; // Posição inicial do eixo Y do mouse
+        function movimentoMouseFundoIMG(e){
+            //posição do mouse na tela
+            console.log("Mouse se moveu!");
+            mouseX = e.clientX
+            mouseY = e.clientY
+
+            //Isso evita que a função seja chamada a todo movimento, sendo chamada apenas em um frame novo no site, reduzindo o consumo computacional [De acordo com o Gemini]
+            if (!animationFrameId) {
+                animationFrameId = requestAnimationFrame(atualizarShadowBoxFundoImg)
+            }
+        }
+        function atualizarShadowBoxFundoImg() {
+            //atenuação pela posição do mouse
+            console.log("Atualizando sombra!");
+            let atenuacao = 0.5;
+
+            //posição da div em relação ao centro da tela
+            let posicaoDiv = fundoImg.getBoundingClientRect()
+            let posicaoDivX = posicaoDiv.left + posicaoDiv.width / 2;
+            let posicaoDivY = posicaoDiv.top + posicaoDiv.height / 2;
+
+            //calcula a diferença entre o mouse e a posição da div
+            let deltaX = mouseX - posicaoDivX
+            let deltaY = mouseY - posicaoDivY
+
+            //define a nova posição da box-shadow em posição oposta a posição do mouse
+            let posicaoSombraNovaX = -deltaX * atenuacao; 
+            let posicaoSombraNovaY = -deltaY * atenuacao;
+            
+            //Limita o quanto a box-shadow pode se mover (evita q fique muito para fora)
+            const limite = 50;
+            posicaoSombraNovaX = Math.max(-limite, Math.min(limite, posicaoSombraNovaX));
+            posicaoSombraNovaY = Math.max(-limite, Math.min(limite, posicaoSombraNovaY));
+
+    
+            const blur = 20;
+            const spreadBoxShadow = 10;
+            const boxShadowCor = "#4A727E"
+
+            
+            fundoImg.style.boxShadow = `${posicaoSombraNovaX} ${posicaoSombraNovaY} ${blur} ${spreadBoxShadow} ${boxShadowCor}`
+
+            animationFrameId = null;
+            
         }
     document.addEventListener("mousemove", movimentoMouseFundoIMG);
+
+    window.addEventListener('resize', () => {
+    if (!animationFrameId) {
+        animationFrameId = requestAnimationFrame(atualizarShadowBoxFundoImg);
+    }
+    });
 
     //Ocultar barra lateral de navegação
     const linkIconeNavegacao = document.getElementById("linkIconeNavegacao")

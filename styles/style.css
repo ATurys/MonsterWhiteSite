@@ -160,19 +160,29 @@ div#background1 {
     height: 70vw;
     width: 70vw;
 
-    transform: rotate(54deg);
+    
     display: flex;
     
-    position: relative;
-    z-index: 3;
+    position: absolute;
 
-
-    border-radius: 15px;
-    background-color: #1C2D34;
-    box-shadow: 4px 4px 5px 2px #4A727E;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -60%) rotate(54deg);
+    z-index: 999;
 }
 
-#fundoLataMonster > img{
+#fundoLataMonsterInterno {
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    border-radius: 15px;
+    background-color: #1C2D34;
+    box-shadow: 4px 4px 20px 10px #4A727E;
+    transition: box-shadow 0.15s ease-out;
+}
+
+#fundoLataMonster > div#fundoLataMonsterInterno > img{
     transform: rotate(305deg);
     margin: -30% 10% 10% 18%;
     height: 140%;
@@ -214,9 +224,11 @@ div#textoIntordutorio > p {
 }
 
 #transiçãoBackground1{
-    position: relative;
+    position: absolute;
     z-index: 1;
     width: 100%;
+
+    top: 100%;
 
     
 }
