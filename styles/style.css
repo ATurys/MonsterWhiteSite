@@ -285,6 +285,7 @@ h1 {
     position: relative;
     z-index: 2;
 
+    font-size: 2.5em;
     text-indent: 1em;
 }
 
@@ -310,7 +311,7 @@ div#artigos {
     min-height: 200px;
 
     max-height: 400px;
-    max-width: 400px;
+    max-width: 100%;
 
     background-color: #F6F5F1;
 
