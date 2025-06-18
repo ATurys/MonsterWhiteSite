@@ -39,11 +39,12 @@ div#barraPrincipalNavegacao {
     position: fixed;
 }
 
-div#barraPrincipalNavegacao  > img{
+div#barraPrincipalNavegacao > a#logoPrincipalNavegacaoSuperior > img{
     float: left;
     padding-left: 10px;
     
     height: 45px;
+
 }
 
 .iconeNavegacaoSuperior {
@@ -322,8 +323,7 @@ div#artigos {
 .artigoTemplate {
     height: 100%;
     
-    min-width: 400px;
-    
+    min-width: 330px;
 
     min-height: 300px;
 
@@ -381,4 +381,25 @@ div#artigos {
     padding: 5px;
 }
 
+footer {
+    margin-bottom: 10px;
+}
 
+footer > p {
+    background-color: black;
+    text-align: center;
+
+    margin: 5px 0px;
+    padding: 5px;
+    color: #C9C8C4;
+
+}
+
+footer > p > a {
+    color: #C9C8C4;
+    text-decoration: none;
+}
+
+footer > p > a:hover {
+    text-decoration: underline;
+}

@@ -28,3 +28,7 @@ div#artigos > h1 {
     text-align: right;
     font-size: 4em;
 }
+
+.artigoTemplate {
+    min-width: 400px;
+}
