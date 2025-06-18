@@ -35,7 +35,7 @@ O layout será desenhado com **mobile-first** em mente e se adapta a diferentes 
 - Desktops
 
 ## 🖥️ Acesso ao Site:
-- Via <a href="https://aturys.github.io/MonsterWhiteSite/" target="_blank">GitHub Pages:</a>
+- Via <a href="https://aturys.github.io/MonsterWhiteSite/" target="_blank">GitHub Pages</a>
 
 ## 🧪 Como Rodar Localmente
 
