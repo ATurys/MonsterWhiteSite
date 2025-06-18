@@ -24,7 +24,7 @@ A proposta dessa página é apresentar o produto **Monster White** de forma atra
 - HTML5
 - CSS3 (com Flexbox)
 - JavaScript (seguindo o ES6+)
-- [Google Fonts](https://fonts.google.com/) (para tipografia estilizada)
+- [Google Fonts](https://fonts.google.com/){:target="_blank"} (para tipografia estilizada)
 
 ## 📱 Responsividade
 
@@ -35,7 +35,7 @@ O layout será desenhado com **mobile-first** em mente e se adapta a diferentes 
 - Desktops
 
 ## 🖥️ Acesso ao Site:
-- Via [GitHub Pages:](https://aturys.github.io/MonsterWhiteSite/)
+- Via [GitHub Pages:](https://aturys.github.io/MonsterWhiteSite/){:target="_blank"}
 
 ## 🧪 Como Rodar Localmente
 
