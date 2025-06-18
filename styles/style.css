@@ -230,6 +230,9 @@ div#textoIntordutorio{
     text-align: center;
     z-index: 2;
 
+    justify-content: center;
+    align-items: center;
+
     display: flex;
 }
 
@@ -292,7 +295,8 @@ h1 {
 div#artigos {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
 
     position: relative;
     z-index: 2;
@@ -305,17 +309,21 @@ div#artigos {
 
 .artigoTemplate {
     height: 100%;
-    width: 100%;
+    
+    min-width: 400px;
+    
 
-    min-width:300px;
-    min-height: 200px;
+    min-height: 300px;
 
     max-height: 400px;
-    max-width: 100%;
+
 
     background-color: #F6F5F1;
 
     margin: 1% 0px;
+
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 .imagemArtigoTemplate {
