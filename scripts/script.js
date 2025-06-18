@@ -1,19 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     //Ajuste da Fonte do texto informativo
-    const mediaQueryMobile = window.matchMedia("(min-width:767px)");
+    const mediaQueryMobile = window.matchMedia("(max-width:767px)");
+    const mediaQueryTablet = window.matchMedia("(min-width:768px) and (max-width: 991px)");
+    const mediaQueryDesktop = window.matchMedia("(min-width: 992px)")
     const divTextoInformativo = document.getElementById("textoIntordutorio");
     const paragrafoTextoInformativo = divTextoInformativo.querySelector("p");
 
     function ajustarFonteTextoInformativo() {
         const alturaMaxima = 140;
-        let tamanhoFonte = 25;
+        if (mediaQueryDesktop.matches) {//Executa se for em uma tela desktop (992px ou +)
+            let tamanhoFonte = 50;
+            while ( tamanhoFonte > 35) {
+                tamanhoFonte--;
+                paragrafoTextoInformativo.style.fontSize = tamanhoFonte + "px"
+
+            }
+            paragrafoTextoInformativo.style.padding = "10px";
+        } else {
+            let tamanhoFonte = 25;
+            paragrafoTextoInformativo.style.fontSize = tamanhoFonte + "px"
+        }
+
+        
         /*line-height * font-size == tamanho por linha
         5 linhas = 1.1 * 25 (aprox 140px)*/
-
-        paragrafoTextoInformativo.style.fontSize = tamanhoFonte + "px"
-        if (!mediaQueryMobile.matches) { //Executa se for em uma tela mobile (767px)
-            
+        
+        if (mediaQueryMobile.matches || mediaQueryTablet.matches) { //Executa se for em uma tela mobile ou tablet (767px)
+            let tamanhoFonte = 25;
             while (paragrafoTextoInformativo.scrollHeight > alturaMaxima && tamanhoFonte > 13) {
                 tamanhoFonte--;
                 paragrafoTextoInformativo.style.fontSize = tamanhoFonte + "px"
@@ -36,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let mouseY = 0; // Posição inicial do eixo Y do mouse
         function movimentoMouseFundoIMG(e){
             //posição do mouse na tela
-            console.log("Mouse se moveu!");
             mouseX = e.clientX
             mouseY = e.clientY
 
@@ -47,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         function atualizarShadowBoxFundoImg() {
             //atenuação pela posição do mouse
-            console.log("Atualizando sombra!");
             let atenuacao = 0.5;
 
             //posição da div em relação ao centro da tela
