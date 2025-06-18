@@ -28,7 +28,9 @@ div#barraPrincipalNavegacao {
     float: right;
 
     display: flex;
+    gap: 10px;
     align-items: center;
+    justify-content: flex-start;
 
     margin-bottom: -80px;
     width: 100%;
@@ -42,6 +44,16 @@ div#barraPrincipalNavegacao  > img{
     padding-left: 10px;
     
     height: 45px;
+}
+
+.iconeNavegacaoSuperior {
+    display: none;
+    margin-right: -60px;
+}
+
+.iconeNavegacaoSuperior > img {
+    display: none;
+    width: 40%;
 }
 
 div#unwraped-logoNavegacao > div#logoNavegacao > a > img.barraLateralAtiva { 

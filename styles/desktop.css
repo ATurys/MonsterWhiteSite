@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-body {
-    background-color: blue;
-}
-
 #fundoLataMonster {
     height: 40vw;
     width: 40vw;
@@ -28,6 +24,35 @@ div#textoIntordutorio{
 div#textoIntordutorio > p {
     text-align: center;
     font-size: 50px;
+}
+
+div#barraNavegacaoLateral.visible {
+    right: 0px;
+}
+
+div#barraNavegacaoLateral {
+    display: none;
+}
+
+div#unwraped-logoNavegacao > div#logoNavegacao > a > img.barraLateralAtiva { 
+    transform:  skew(-20deg) rotate(-90deg);
+    
+}
+
+.iconeNavegacaoSuperior {
+    display: inline;
+    margin-right: -60px;
+}
+
+.iconeNavegacaoSuperior > img {
+    display: block;
+    width: 40%;
+}
+
+div#unwraped-logoNavegacao > div#logoNavegacao > a > img {
+    max-height: 75%;
+    transform:  skew(-20deg) rotate(-90deg);
+    transition: transform 0s;
 }
 
 div#transiçãoBackground1 > div#fundoBranco {

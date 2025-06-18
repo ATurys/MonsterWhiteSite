@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         function atualizarShadowBoxFundoImg() {
             //atenuação pela posição do mouse
-            let atenuacao = 0.5;
+            let atenuacao = 0.05;
 
             //posição da div em relação ao centro da tela
             let posicaoDiv = fundoImg.getBoundingClientRect()
